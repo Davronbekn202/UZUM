@@ -18,7 +18,7 @@ elif check == 2:
     1 - add user
     2 - payment
     """)
-    choice = int(input())
+    choice = int(input("choose: "))
     if choice == 1:
         insert_to_users_main()
     elif choice == 2:

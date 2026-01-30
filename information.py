@@ -4,12 +4,13 @@ from db import get_connection
 
 def insert_to_users(full_name,phone,password,role):
     connect = get_connection()
-    cursor = connect.cursor
+    cursor = connect.cursor()
     cursor.execute("""
         insert into users (full_name,phone,password,role)
         values (%s,%s,%s,%s)
     """,(full_name,phone,password,role))
-
+    connect.commit()
+    cursor.close()
 def categories(name):
     connect = get_connection()
     cursor = connect.curor

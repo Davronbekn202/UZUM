@@ -1,14 +1,12 @@
-from datetime import datetime
 from information import *
-
 
 def insert_to_users_main():
     full_name = input("Enter full-name: ")
-    phone = int(input("Enter phone: "))
+    phone = input("Enter phone: ")
     password = input("Enter password: ")
     role = input("Enter your role: ")
     insert_to_users(full_name, phone, password, role)
-
+    print("information sent to users box")
 
 def categories_main():
     name = input("Enter your name: ")
@@ -56,7 +54,7 @@ def payments_main():
     product_id = int(input("Enter id of product: "))
     amount = float(input("Enter the amount: "))
     status = input("Enter the status: ")
-    paid_at = datetime.now()
+    paid_at = input("data: ")
     payments(order_id, product_id, amount, status, paid_at)
 
 

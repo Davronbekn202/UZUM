@@ -99,7 +99,7 @@ def init_db():
     conn.commit()
     cur.close()
     conn.close()
-
+    print("tables created")
 
 
 
